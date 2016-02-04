@@ -46,8 +46,11 @@ class Demo {
                  "your IP" => $_SERVER['REMOTE_ADDR'],
                  "you acces this from" => $_SERVER["HTTP_REFERER"]);
   }
+
+  public function whoisuli($token) {
+    return array("token" => $token);
+  }
+
 }
 
 handle_json_rpc(new Demo());
-
-?>
