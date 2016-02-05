@@ -41,14 +41,15 @@ class Demo {
     }
   }
   static $whoami_documentation = "return user information";
-  public function whoami($token) {
-    return array("your User Agent" => $_SERVER["HTTP_USER_AGENT"],
+  public function whoami($token,$a = null) {
+    return array("2" => $a,
+                  "your User Agent" => $_SERVER["HTTP_USER_AGENT"],
                  "your IP" => $_SERVER['REMOTE_ADDR'],
                  "you acces this from" => $_SERVER["HTTP_REFERER"]);
   }
 
-  public function whoisuli($token) {
-    return array("token" => $token);
+  public function whoisuli($token,$a = null) {
+    return array("token" => $token,"2" => $a);
   }
 
 }
